@@ -22,12 +22,7 @@ int main() {
         {
             cout << "Minimum amount of fence is 3 meters";
         }
-          else if (length == 3)
-        {
-            cout << "Optimum a value is : " << 1 << " meter" << endl;
-            cout << "Optimum b value is : " << 1 << " meter" << endl;
-            cout << "Optimal area of McDonald's farm is :  " << 1 << " square meter" << endl;
-        }
+         
           else {
 
             /* In purpose to calculate optimal area we need to find a function describing area od farm
@@ -43,9 +38,9 @@ int main() {
 
 
             a = length / 4;
-             if (a % 2 == 1)
+             if (length % 4 == 3) // for "length" values which mod 4 is equal 3, we need to add 1 to get optimum "a' value
             {
-                a = a + 0.5; // we assume that "a" is integer
+                a = a + 1; // we assume that "a" is integer
             }
              else a = length / 4;
 
